@@ -298,7 +298,7 @@ http {
 				proxy_set_header X-Forwarded-Proto $access_scheme;
 				proxy_set_header X-Forwarded-Port $forwarded_port;
 				proxy_redirect off;
-				proxy_connect_timeout {{ $location.App.ConnectTimeout }};
+				proxy_connect_timeout {{ $appConfig.ConnectTimeout }};
 				proxy_send_timeout {{ $location.App.TCPTimeout }};
 				proxy_read_timeout {{ $location.App.TCPTimeout }};
 				proxy_http_version 1.1;
