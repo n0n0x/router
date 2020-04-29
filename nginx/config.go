@@ -298,6 +298,7 @@ http {
 				proxy_set_header X-Forwarded-Proto $access_scheme;
 				proxy_set_header X-Forwarded-Port $forwarded_port;
 				proxy_redirect off;
+                # rollbacking this
 				proxy_connect_timeout {{ $appConfig.ConnectTimeout }};
 				proxy_send_timeout {{ $location.App.TCPTimeout }};
 				proxy_read_timeout {{ $location.App.TCPTimeout }};
